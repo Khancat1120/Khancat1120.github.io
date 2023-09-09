@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git学习笔记 | Kehan&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/icon.jpg">
+    <link rel="stylesheet" href="/iconfont/iconfont.css">
+    <script language="javascript" type="text/javascript" src="/iconfont/iconfont.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <meta name="description" content="Stay foolish，stay hungry">
+    <meta name="keywords" content="Personal Blog">
+    <meta name="baidu-site-verification" content="bdukCluk30">
+    <meta name="sogou_site_verification" content="gReIJbnqBO">
+    <meta name="author" content="MaNong">
+    
+    <link rel="preload" href="/assets/css/0.styles.d339af1d.css" as="style"><link rel="preload" href="/assets/js/app.74f2cc05.js" as="script"><link rel="preload" href="/assets/js/2.e217f411.js" as="script"><link rel="preload" href="/assets/js/1.1bf74a5b.js" as="script"><link rel="preload" href="/assets/js/58.26a0646c.js" as="script"><link rel="prefetch" href="/assets/js/10.9d3c5355.js"><link rel="prefetch" href="/assets/js/11.92219eaf.js"><link rel="prefetch" href="/assets/js/12.bd49d66c.js"><link rel="prefetch" href="/assets/js/13.553a6453.js"><link rel="prefetch" href="/assets/js/14.ac627b11.js"><link rel="prefetch" href="/assets/js/15.96a37a59.js"><link rel="prefetch" href="/assets/js/16.b401dd7c.js"><link rel="prefetch" href="/assets/js/17.4ccf8486.js"><link rel="prefetch" href="/assets/js/18.8625a3ea.js"><link rel="prefetch" href="/assets/js/19.f10feea8.js"><link rel="prefetch" href="/assets/js/20.4a5ae7f3.js"><link rel="prefetch" href="/assets/js/21.83fe25d1.js"><link rel="prefetch" href="/assets/js/22.9d259600.js"><link rel="prefetch" href="/assets/js/23.97bf8c1c.js"><link rel="prefetch" href="/assets/js/24.7c5efede.js"><link rel="prefetch" href="/assets/js/25.8887dd39.js"><link rel="prefetch" href="/assets/js/26.b40e7982.js"><link rel="prefetch" href="/assets/js/27.920c4f13.js"><link rel="prefetch" href="/assets/js/28.f7fc3c71.js"><link rel="prefetch" href="/assets/js/29.27c18969.js"><link rel="prefetch" href="/assets/js/3.9847366f.js"><link rel="prefetch" href="/assets/js/30.0ea6f04a.js"><link rel="prefetch" href="/assets/js/31.228408d8.js"><link rel="prefetch" href="/assets/js/32.4bd5dc55.js"><link rel="prefetch" href="/assets/js/33.bd05dde7.js"><link rel="prefetch" href="/assets/js/34.fa4b2145.js"><link rel="prefetch" href="/assets/js/35.c15cbb34.js"><link rel="prefetch" href="/assets/js/36.0fded803.js"><link rel="prefetch" href="/assets/js/37.879a998c.js"><link rel="prefetch" href="/assets/js/38.6a47c4f2.js"><link rel="prefetch" href="/assets/js/39.a5155264.js"><link rel="prefetch" href="/assets/js/4.a9bec180.js"><link rel="prefetch" href="/assets/js/40.64ac5d15.js"><link rel="prefetch" href="/assets/js/41.4f7e70c6.js"><link rel="prefetch" href="/assets/js/42.891cf92c.js"><link rel="prefetch" href="/assets/js/43.9698388f.js"><link rel="prefetch" href="/assets/js/44.159e6ee5.js"><link rel="prefetch" href="/assets/js/45.068d2d7e.js"><link rel="prefetch" href="/assets/js/46.d8118f82.js"><link rel="prefetch" href="/assets/js/47.906b4380.js"><link rel="prefetch" href="/assets/js/48.390b0b83.js"><link rel="prefetch" href="/assets/js/49.aa60b03f.js"><link rel="prefetch" href="/assets/js/5.10ac1910.js"><link rel="prefetch" href="/assets/js/50.8fb644e4.js"><link rel="prefetch" href="/assets/js/51.8966cf71.js"><link rel="prefetch" href="/assets/js/52.a876e266.js"><link rel="prefetch" href="/assets/js/53.0e1eb961.js"><link rel="prefetch" href="/assets/js/54.3ad9a2bf.js"><link rel="prefetch" href="/assets/js/55.dc639e0d.js"><link rel="prefetch" href="/assets/js/56.1865504d.js"><link rel="prefetch" href="/assets/js/57.94459d73.js"><link rel="prefetch" href="/assets/js/59.7ab79db5.js"><link rel="prefetch" href="/assets/js/6.0180fe1e.js"><link rel="prefetch" href="/assets/js/7.6d6d614e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.8cfee020.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.d339af1d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/icon.jpg" alt="Kehan's Blog" class="logo"> <span class="site-name can-hide">Kehan's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home page
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Knowledge" class="dropdown-title"><span class="title">Knowledge</span> <span class="arrow down"></span></button> <button type="button" aria-label="Knowledge" class="mobile-dropdown-title"><span class="title">Knowledge</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/knowledge/Lessons/01-CS224W.html" class="nav-link">
+  Lessons
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Book/test.html" class="nav-link">
+  Books
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Survey/01-Textgraph.html" class="nav-link">
+  Survey
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Interview/test.html" class="nav-link">
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/funny/English.html" class="nav-link">
+  Weird part
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Technology" class="dropdown-title"><span class="title">Technology</span> <span class="arrow down"></span></button> <button type="button" aria-label="Technology" class="mobile-dropdown-title"><span class="title">Technology</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/code/test.html" class="nav-link">
+  Algorithms
+</a></li><li class="dropdown-item"><!----> <a href="/technology/model/test.html" class="nav-link">
+  Models
+</a></li><li class="dropdown-item"><!----> <a href="/technology/environment/1-install.html" class="nav-link">
+  Environments
+</a></li><li class="dropdown-item"><!----> <a href="/technology/tool/01-git.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/technology/bug/bug.html" class="nav-link">
+  Bugs
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/1-个人陈述.html" class="nav-link">
+  Essay
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About me
+</a></div> <a href="https://github.com/Khancat1120/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home page
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Knowledge" class="dropdown-title"><span class="title">Knowledge</span> <span class="arrow down"></span></button> <button type="button" aria-label="Knowledge" class="mobile-dropdown-title"><span class="title">Knowledge</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/knowledge/Lessons/01-CS224W.html" class="nav-link">
+  Lessons
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Book/test.html" class="nav-link">
+  Books
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Survey/01-Textgraph.html" class="nav-link">
+  Survey
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Interview/test.html" class="nav-link">
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/funny/English.html" class="nav-link">
+  Weird part
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Technology" class="dropdown-title"><span class="title">Technology</span> <span class="arrow down"></span></button> <button type="button" aria-label="Technology" class="mobile-dropdown-title"><span class="title">Technology</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/code/test.html" class="nav-link">
+  Algorithms
+</a></li><li class="dropdown-item"><!----> <a href="/technology/model/test.html" class="nav-link">
+  Models
+</a></li><li class="dropdown-item"><!----> <a href="/technology/environment/1-install.html" class="nav-link">
+  Environments
+</a></li><li class="dropdown-item"><!----> <a href="/technology/tool/01-git.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Tools
+</a></li><li class="dropdown-item"><!----> <a href="/technology/bug/bug.html" class="nav-link">
+  Bugs
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/1-个人陈述.html" class="nav-link">
+  Essay
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About me
+</a></div> <a href="https://github.com/Khancat1120/vuepress-blog" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Algorithms</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Models</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Environments</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Bugs</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Tools</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/technology/tool/01-git.html" aria-current="page" class="active sidebar-link">Git学习笔记</a></li><li><a href="/technology/tool/test.html" class="sidebar-link">Git学习笔记</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git学习笔记"><a href="#git学习笔记" class="header-anchor">#</a> Git学习笔记</h1> <!----> <h2 id="登录"><a href="#登录" class="header-anchor">#</a> 登录</h2> <p>要查看当前登录到 Git 的账号，您可以使用以下 Git 命令查看全局配置中的用户信息：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email
+</code></pre></div><p>这两个命令将显示当前全局配置中的用户名和电子邮件地址。这些信息通常与Git上的账号相关联。</p> <p>::: 注意
+这些命令将显示全局配置中的信息，这意味着它们用于您在计算机上的所有 Git 仓库。如果您希望查看特定仓库的配置，请进入该仓库的目录，并使用相同的命令，但不带 --global 标志，例如：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token builtin class-name">cd</span> /path/to/your/repository
+<span class="token function">git</span> config user.name
+<span class="token function">git</span> config user.email
+</code></pre></div><p>:::</p> <p>在git切换登录账号时，通常会出现用户凭据问题，解决办法：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> credential reject
+</code></pre></div><h2 id="分支"><a href="#分支" class="header-anchor">#</a> 分支</h2> <p>在Git中，分支（Branch）是用来管理和跟踪代码开发的一个重要概念。分支实际上是代码库的不同版本或线路的副本，每个分支都可以独立地进行修改和开发，而不会影响其他分支。这允许团队协同开发，同时保持代码的稳定性和版本控制。以下是Git中不同分支的一些常见含义：</p> <ul><li><p>主分支（Main/Branch）：主分支通常被称为main或master，是代码库的默认分支。它包含了项目的稳定版本，通常是生产环境中正在运行的代码。新功能通常不会直接添加到主分支，而是在其他分支上进行开发和测试，然后合并到主分支中。</p></li> <li><p>特性分支（Feature Branch）：特性分支是为了开发新功能或修复Bug而创建的分支。每个特性分支通常对应一个特定的任务或问题，开发完成后，可以将特性分支合并回主分支。</p></li> <li><p>发布分支（Release Branch）：发布分支用于准备发布新版本的代码。在发布前，可以在发布分支上进行最后的测试、修复bug和文档更新。一旦准备就绪，发布分支通常会合并回主分支，然后发布到生产环境。</p></li> <li><p>热修复分支（Hotfix Branch）：热修复分支用于紧急修复生产环境中的严重Bug，而不需要等待下一个正式发布。修复完成后，热修复分支会合并回主分支和适用的发布分支。</p></li></ul> <h3 id="创建分支"><a href="#创建分支" class="header-anchor">#</a> 创建分支：</h3> <p>要创建一个新的分支，可以使用以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+</code></pre></div><p>例如，创建一个名为&quot;feature-xyz&quot;的特性分支：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch feature-xyz
+</code></pre></div><ol start="2"><li>切换分支：</li></ol> <p>要切换到一个分支，可以使用以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> checkout <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+</code></pre></div><p>或者使用Git 2.23及更高版本的更现代的切换方式：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> switch <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+</code></pre></div><p>例如，切换到&quot;feature-xyz&quot;分支：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> checkout feature-xyz
+</code></pre></div><p>或：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> switch feature-xyz
+</code></pre></div><ol start="3"><li>合并分支：</li></ol> <p>要将一个分支的更改合并到另一个分支，可以使用以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> merge <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+</code></pre></div><p>例如，将&quot;feature-xyz&quot;分支的更改合并到主分支：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> checkout main  <span class="token comment"># 切换回主分支</span>
+<span class="token function">git</span> merge feature-xyz
+</code></pre></div><p>当你要合并两个分支时，如果这两个分支之间存在代码差异，Git会尝试自动合并这些差异。这个过程中可能会发生冲突（conflicts），因为Git无法确定应该保留哪个版本的代码。当出现冲突时，需要手动解决这些冲突。</p> <ol start="4"><li>删除分支：</li></ol> <p>要删除一个分支，可以使用以下命令：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch <span class="token parameter variable">-d</span> <span class="token operator">&lt;</span>branch-name<span class="token operator">&gt;</span>
+</code></pre></div><p>例如，删除&quot;feature-xyz&quot;分支：</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch <span class="token parameter variable">-d</span> feature-xyz
+</code></pre></div><p>这些是Git分支的基本操作示例。请注意，分支操作可能会影响代码库的历史，因此在执行合并或删除分支操作之前，请确保您了解其影响，并在需要时进行适当的备份和测试。此外，使用合并请求或拉取请求来协作开发，以确保团队成员可以审查和讨论更改。</p> <!----></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/Khancat1120/vuepress-blog/edit/main/docs/technology/tool/01-git.md" target="_blank" rel="noopener noreferrer">Edit this page</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/technology/bug/bug.html" class="prev">
+        Bug-bug退散
+      </a></span> <span class="next"><a href="/technology/tool/test.html">
+        Git学习笔记
+      </a>
+      →
+    </span></p></div> </main></div> <div class="home"><div class="footer"><a href="https://github.com/Khancat1120/Khancat1120.github.io/issues" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Please contact me if you have any question about this page or this blog.
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div></div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.74f2cc05.js" defer></script><script src="/assets/js/2.e217f411.js" defer></script><script src="/assets/js/1.1bf74a5b.js" defer></script><script src="/assets/js/58.26a0646c.js" defer></script>
+  </body>
+</html>
