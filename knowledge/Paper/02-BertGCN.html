@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>论文解读-BertGCN | Mandarine&#39;s Blog</title>
+    <meta name="generator" content="VuePress 1.9.10">
+    <link rel="icon" href="/icon.jpg">
+    <link rel="stylesheet" href="/iconfont/iconfont.css">
+    <script language="javascript" type="text/javascript" src="/iconfont/iconfont.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/autoload.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css">
+    <meta name="description" content="Stay foolish，stay hungry">
+    <meta name="keywords" content="Personal Blog">
+    <meta name="baidu-site-verification" content="bdukCluk30">
+    <meta name="sogou_site_verification" content="gReIJbnqBO">
+    <meta name="author" content="MaNong">
+    
+    <link rel="preload" href="/assets/css/0.styles.2696da6a.css" as="style"><link rel="preload" href="/assets/js/app.cb77e115.js" as="script"><link rel="preload" href="/assets/js/2.e217f411.js" as="script"><link rel="preload" href="/assets/js/1.1bf74a5b.js" as="script"><link rel="preload" href="/assets/js/41.4f7e70c6.js" as="script"><link rel="prefetch" href="/assets/js/10.9d3c5355.js"><link rel="prefetch" href="/assets/js/11.92219eaf.js"><link rel="prefetch" href="/assets/js/12.bd49d66c.js"><link rel="prefetch" href="/assets/js/13.553a6453.js"><link rel="prefetch" href="/assets/js/14.ac627b11.js"><link rel="prefetch" href="/assets/js/15.96a37a59.js"><link rel="prefetch" href="/assets/js/16.b401dd7c.js"><link rel="prefetch" href="/assets/js/17.4ccf8486.js"><link rel="prefetch" href="/assets/js/18.6855d1e6.js"><link rel="prefetch" href="/assets/js/19.f10feea8.js"><link rel="prefetch" href="/assets/js/20.4a5ae7f3.js"><link rel="prefetch" href="/assets/js/21.83fe25d1.js"><link rel="prefetch" href="/assets/js/22.9d259600.js"><link rel="prefetch" href="/assets/js/23.97bf8c1c.js"><link rel="prefetch" href="/assets/js/24.e4e7a3b4.js"><link rel="prefetch" href="/assets/js/25.8887dd39.js"><link rel="prefetch" href="/assets/js/26.b40e7982.js"><link rel="prefetch" href="/assets/js/27.920c4f13.js"><link rel="prefetch" href="/assets/js/28.f7fc3c71.js"><link rel="prefetch" href="/assets/js/29.27c18969.js"><link rel="prefetch" href="/assets/js/3.9847366f.js"><link rel="prefetch" href="/assets/js/30.0ea6f04a.js"><link rel="prefetch" href="/assets/js/31.228408d8.js"><link rel="prefetch" href="/assets/js/32.4bd5dc55.js"><link rel="prefetch" href="/assets/js/33.bd05dde7.js"><link rel="prefetch" href="/assets/js/34.fa4b2145.js"><link rel="prefetch" href="/assets/js/35.120d7adc.js"><link rel="prefetch" href="/assets/js/36.0fded803.js"><link rel="prefetch" href="/assets/js/37.879a998c.js"><link rel="prefetch" href="/assets/js/38.6a47c4f2.js"><link rel="prefetch" href="/assets/js/39.a5155264.js"><link rel="prefetch" href="/assets/js/4.a9bec180.js"><link rel="prefetch" href="/assets/js/40.64ac5d15.js"><link rel="prefetch" href="/assets/js/42.891cf92c.js"><link rel="prefetch" href="/assets/js/43.9698388f.js"><link rel="prefetch" href="/assets/js/44.159e6ee5.js"><link rel="prefetch" href="/assets/js/45.068d2d7e.js"><link rel="prefetch" href="/assets/js/46.d8118f82.js"><link rel="prefetch" href="/assets/js/47.906b4380.js"><link rel="prefetch" href="/assets/js/48.390b0b83.js"><link rel="prefetch" href="/assets/js/49.aa60b03f.js"><link rel="prefetch" href="/assets/js/5.10ac1910.js"><link rel="prefetch" href="/assets/js/50.8fb644e4.js"><link rel="prefetch" href="/assets/js/51.8966cf71.js"><link rel="prefetch" href="/assets/js/52.a876e266.js"><link rel="prefetch" href="/assets/js/53.0e1eb961.js"><link rel="prefetch" href="/assets/js/54.3ad9a2bf.js"><link rel="prefetch" href="/assets/js/55.dc639e0d.js"><link rel="prefetch" href="/assets/js/56.1865504d.js"><link rel="prefetch" href="/assets/js/57.94459d73.js"><link rel="prefetch" href="/assets/js/58.ea118148.js"><link rel="prefetch" href="/assets/js/6.0180fe1e.js"><link rel="prefetch" href="/assets/js/7.6d6d614e.js"><link rel="prefetch" href="/assets/js/vendors~docsearch.8cfee020.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.2696da6a.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/icon.jpg" alt="Mandarine's Blog" class="logo"> <span class="site-name can-hide">Mandarine's Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home page
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Knowledge" class="dropdown-title"><span class="title">Knowledge</span> <span class="arrow down"></span></button> <button type="button" aria-label="Knowledge" class="mobile-dropdown-title"><span class="title">Knowledge</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/knowledge/Lessons/01-CS224W.html" class="nav-link">
+  Lessons
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Book/test.html" class="nav-link">
+  Books
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Survey/01-Textgraph.html" class="nav-link">
+  Survey
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Interview/test.html" class="nav-link">
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/funny/English.html" class="nav-link">
+  Weird part
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Technology" class="dropdown-title"><span class="title">Technology</span> <span class="arrow down"></span></button> <button type="button" aria-label="Technology" class="mobile-dropdown-title"><span class="title">Technology</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/code/test.html" class="nav-link">
+  Algorithms
+</a></li><li class="dropdown-item"><!----> <a href="/technology/model/test.html" class="nav-link">
+  Models
+</a></li><li class="dropdown-item"><!----> <a href="/technology/environment/1-install.html" class="nav-link">
+  Environments
+</a></li><li class="dropdown-item"><!----> <a href="/technology/tool/test.html" class="nav-link">
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/1-个人陈述.html" class="nav-link">
+  Essay
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About me
+</a></div> <a href="https://github.com/Khancat1120/Khancat1120.github.io/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/index.html" class="nav-link">
+  Home page
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Knowledge" class="dropdown-title"><span class="title">Knowledge</span> <span class="arrow down"></span></button> <button type="button" aria-label="Knowledge" class="mobile-dropdown-title"><span class="title">Knowledge</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/knowledge/Lessons/01-CS224W.html" class="nav-link">
+  Lessons
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Book/test.html" class="nav-link">
+  Books
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Survey/01-Textgraph.html" class="nav-link">
+  Survey
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/Interview/test.html" class="nav-link">
+  Interview
+</a></li><li class="dropdown-item"><!----> <a href="/knowledge/funny/English.html" class="nav-link">
+  Weird part
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Technology" class="dropdown-title"><span class="title">Technology</span> <span class="arrow down"></span></button> <button type="button" aria-label="Technology" class="mobile-dropdown-title"><span class="title">Technology</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/technology/code/test.html" class="nav-link">
+  Algorithms
+</a></li><li class="dropdown-item"><!----> <a href="/technology/model/test.html" class="nav-link">
+  Models
+</a></li><li class="dropdown-item"><!----> <a href="/technology/environment/1-install.html" class="nav-link">
+  Environments
+</a></li><li class="dropdown-item"><!----> <a href="/technology/tool/test.html" class="nav-link">
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/jottings/1-个人陈述.html" class="nav-link">
+  Essay
+</a></div><div class="nav-item"><a href="/about/" class="nav-link">
+  About me
+</a></div> <a href="https://github.com/Khancat1120/Khancat1120.github.io/" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Github
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Lessons</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/knowledge/Lessons/01-CS224W.html" class="sidebar-link">CS224W</a></li></ul></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Books</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Survey</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Interview</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>Weird part</span> <span class="arrow right"></span></p> <!----></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="bertgcn-transductive-text-classification-by-combining-gcn-and-bert"><a href="#bertgcn-transductive-text-classification-by-combining-gcn-and-bert" class="header-anchor">#</a> BertGCN: Transductive Text Classification by Combining GCN and BERT</h1> <!----> <p>BertGCN也是两部分Build Graph及Model Train。</p> <p>1.构图：Build Graph这部分与TextGCN是一样的，没啥区别就略过了，重点来聊聊模型部分。</p> <p>2.初始化：BertGCN在node embedding初始化时，不是采用随机初始化策略，而是用bert处理document节点进行初始化，而word节点初始embedding直接初始化为0。</p> <p>3.融合BERT模块与GCN模块得到的结果、模型训练</p> <p>在融合Bert与GCN训练这部分，文中指出，将Bert encoder部分得到embedding后丢进GCN里，直接联合训练，会有两个问题出现，</p> <ol><li>梯度回传时，Bert部分得不到有效的梯度优化。</li> <li>GCN是全图更新的，假设图是1w个document节点，则bert部分1w个document同时进行bert encoder得到document embedding,然后丢到GCN layer中更新训练，这显然是做不到的。</li></ol> <p>针对这些问题，文中提出了插值更新的方法。最后的插值更新就是将GCN那部分得到document embedding的及Bert单独作用于文本的两个document embedding加起来得到融合分类概率Z，然后采用cross entropy损失函数做一个分类预测。</p> <p>由于BERT的存在，BertGCN在训练时只能一次加载一个batch而非整个图。为此，BertGCN使用了记忆存储库（Memory Bank） 技术解决该问题。记忆存储库
+保存了所有文档结点的特征，将图结点与训练时的每个batch进行分离，每个batch只需要从中取所需的一小部分结点特征即可。</p> <p>简要来说，记忆存储机制通过每次迭代，动态地更新一小部分文档结点，使用这部分结点训练模型。这就避免了一次性将所有特征读入BERT进行计算，极大减少了内存开销。</p> <p>但由此带来的一个问题是，由于文档结点是分批更新的，所以在一个Epoch的不同迭代步，输入到模型里的特征会出现不一致的现象。为此，BertGCN在更新BERT模块时采用较小的学习率，减少特征之间的不一致。为加速训练，BertGCN还在训练之前用一个在下游数据集上训练好的BERT模型初始化BertGCN中的BERT模块。</p> <!----></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div> <div class="home"><div class="footer"><a href="https://github.com/Khancat1120/Khancat1120.github.io" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Please contact me if you have any question about this page or this blog.
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div></div></div><div class="global-ui"><!----><!----></div></div>
+    <script src="/assets/js/app.cb77e115.js" defer></script><script src="/assets/js/2.e217f411.js" defer></script><script src="/assets/js/1.1bf74a5b.js" defer></script><script src="/assets/js/41.4f7e70c6.js" defer></script>
+  </body>
+</html>
